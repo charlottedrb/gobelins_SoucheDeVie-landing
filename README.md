@@ -19,3 +19,10 @@ Voici la configuration à mettre dans votre settings.json (accès : ctrl + shift
         "scss/*[!(app)].scss"
     ],
 ```
+
+## Utilisation des mixins 
+
+```
+@include responsive(sm) {
+    // ...
+}
