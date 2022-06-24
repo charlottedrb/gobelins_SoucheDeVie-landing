@@ -1,0 +1,44 @@
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  height: 100vh;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  color: blue;
+}
+
+.menu > div {
+  height: 100%;
+  border-right: 1px solid blue;
+}
+
+header > div {
+  height: 100vh;
+  border-bottom-right-radius: 150px;
+  background: lightgrey;
+}
+
+body {
+  margin: 0;
+}
+
+body section {
+  min-height: 100vh;
+}

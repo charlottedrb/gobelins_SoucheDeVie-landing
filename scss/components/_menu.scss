@@ -1,0 +1,24 @@
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+
+    height: 100vh;
+    
+    ul {
+        margin: 0;
+        padding: 1.5rem;
+
+        li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+            color: blue;
+        }
+    }
+
+    & > div {
+        height: 100%;
+        border-right: 1px solid blue;
+    }
+}
