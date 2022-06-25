@@ -1,11 +1,17 @@
 section {
-    .section{
-        &-title {
-
-        }
-
-        &-content {
-            
-        }
+  .section {
+    &-title {
     }
+
+    &-content {
+      max-width: 40%;
+    }
+  }
+}
+
+// About section
+
+.about {
+  margin-left: 15%;
+  padding: 10% 0;
 }

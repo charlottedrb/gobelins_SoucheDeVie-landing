@@ -1,3 +1,47 @@
+h1, h2, h3 {
+  font-family: "AbhayaLibre-Bold";
+}
+
+@font-face {
+  font-family: "AbhayaLibre-Bold";
+  src: url("/fonts/AbhayaLibre-Bold.tff") format("tff");
+}
+
+@font-face {
+  font-family: "AbhayaLibre-ExtraBold";
+  src: url("/fonts/AbhayaLibre-ExtraBold.tff") format("tff");
+}
+
+@font-face {
+  font-family: "AbhayaLibre-Medium";
+  src: url("/fonts/AbhayaLibre-Medium.tff") format("tff");
+}
+
+@font-face {
+  font-family: "AbhayaLibre-Regular";
+  src: url("/fonts/AbhayaLibre-Regular.tff") format("tff");
+}
+
+@font-face {
+  font-family: "AbhayaLibre-SemiBold";
+  src: url("/fonts/AbhayaLibre-SemiBold.tff") format("tff");
+}
+
+@font-face {
+  font-family: "Livvic-Light";
+  src: url("/fonts/Livvic-Light.tff") format("tff");
+}
+
+@font-face {
+  font-family: "TT Commons Light Italic";
+  src: url("/fonts/TT Commons Light Italic.otf") format("otf");
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  src: url("/fonts/TT Commons Light.otf") format("otf");
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,6 +77,15 @@ header > div {
   height: 100vh;
   border-bottom-right-radius: 150px;
   background: lightgrey;
+}
+
+section .section-content {
+  max-width: 40%;
+}
+
+.about {
+  margin-left: 15%;
+  padding: 10% 0;
 }
 
 body {
