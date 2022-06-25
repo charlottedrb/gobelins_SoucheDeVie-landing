@@ -1,45 +1,8 @@
-h1, h2, h3 {
-  font-family: "AbhayaLibre-Bold";
-}
-
-@font-face {
-  font-family: "AbhayaLibre-Bold";
-  src: url("/fonts/AbhayaLibre-Bold.tff") format("tff");
-}
-
-@font-face {
-  font-family: "AbhayaLibre-ExtraBold";
-  src: url("/fonts/AbhayaLibre-ExtraBold.tff") format("tff");
-}
-
-@font-face {
-  font-family: "AbhayaLibre-Medium";
-  src: url("/fonts/AbhayaLibre-Medium.tff") format("tff");
-}
-
-@font-face {
-  font-family: "AbhayaLibre-Regular";
-  src: url("/fonts/AbhayaLibre-Regular.tff") format("tff");
-}
-
-@font-face {
-  font-family: "AbhayaLibre-SemiBold";
-  src: url("/fonts/AbhayaLibre-SemiBold.tff") format("tff");
-}
-
-@font-face {
-  font-family: "Livvic-Light";
-  src: url("/fonts/Livvic-Light.tff") format("tff");
-}
-
-@font-face {
-  font-family: "TT Commons Light Italic";
-  src: url("/fonts/TT Commons Light Italic.otf") format("otf");
-}
-
-@font-face {
-  font-family: "TT Commons Light";
-  src: url("/fonts/TT Commons Light.otf") format("otf");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Livvic:wght@300&family=Poppins:wght@300;600&display=swap");
+header > div {
+  height: 100vh;
+  border-bottom-right-radius: 150px;
+  background: lightgrey;
 }
 
 .menu {
@@ -73,10 +36,32 @@ h1, h2, h3 {
   border-right: 1px solid blue;
 }
 
-header > div {
-  height: 100vh;
-  border-bottom-right-radius: 150px;
-  background: lightgrey;
+footer {
+  background-color: #2526CC;
+}
+
+h1, h2, h3 {
+  font-family: "AbhayaLibre-Bold";
+  color: #2526CC;
+}
+
+@font-face {
+  font-family: "Livvic-Light";
+  src: url("/fonts/Livvic-Light.tff") format("tff");
+}
+
+@font-face {
+  font-family: "TT Commons Light Italic";
+  src: url("/fonts/TT Commons Light Italic.otf") format("otf");
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  src: url("/fonts/TT Commons Light.otf") format("otf");
+}
+
+section .section-title {
+  color: #2526CC;
 }
 
 section .section-content {
@@ -86,6 +71,30 @@ section .section-content {
 .about {
   margin-left: 15%;
   padding: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10vh;
+  background-image: url("/assets/arbre.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.about h2 {
+  font-size: 45px;
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+}
+
+.about p {
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 300;
 }
 
 body {

@@ -1,11 +1,11 @@
 section {
   .section {
     &-title {
+      color: $main-blue;
     }
 
     &-content {
       max-width: 40%;
-            color: $main-blue;
     }
   }
 }
@@ -15,4 +15,21 @@ section {
 .about {
   margin-left: 15%;
   padding: 10% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  background-image: url("/assets/arbre.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  h2 {
+    font-size: 45px;
+    font-family: "Abhaya Libre";
+    font-weight: 800;
+  }
+  p {
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 300;
+  }
 }
