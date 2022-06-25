@@ -1,0 +1,132 @@
+// _______________________________  computer version  _______________________________
+// tempo for dev
+.team-section {
+
+    & > .section-title {
+        margin: 0;
+        font-size: 45pt;
+    }
+
+    & > .section-content {
+        font-size: 20pt;
+    }
+
+    & > .section-title, & > .section-content {
+        padding: 0 40% 0 10%;
+    }
+
+    & > .team {
+        margin: 0 10% 0 10%;
+    }
+}
+
+.team {
+
+    display: flex;
+    flex-direction: column;
+
+    & > .team-division {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        margin: 100px 0;
+
+        & > .team-member {
+
+            width: 100%;
+
+            h3, p, a {
+                margin: 0;
+            }
+
+            h3 {
+                font-family: "AbhayaLibre-ExtraBold";
+                font-size: 25pt;
+                color: $main-blue;
+            }
+
+            p {
+                font-family: "Poppins-Light";
+                font-size: 20pt;
+                color: $main-blue;
+            }
+
+            a, a:visited {
+                font-family: "Poppins-Light";
+                font-size: 20pt;
+                color: $main-purple;
+            }
+        }
+
+    }
+
+}
+
+
+// // _______________________________  phone version  _______________________________
+// // tempo for dev
+// .team-section {
+
+//     & > .section-title {
+//         font-size: 28pt;
+//     }
+
+//     & > .section-content {
+//         font-size: 20pt;
+//     }
+
+//     & > .section-title, & > .section-content {
+//         padding: 0 10% 0 10%;
+//     }
+// }
+
+// .team {
+
+//     margin: 0 0 100px 0;
+
+//     & > .team-division {
+
+//         & > .team-member {
+
+//             display: flex;
+//             margin: 25px 0 0 0;
+
+//             .team-member-hl {
+//                 position: relative;
+//                 display: block;
+//                 top: 10px;
+//                 height: 1px;
+//                 min-width: 20%;
+//                 width: 20%;
+//                 margin: 5px 10% 0 0;
+//                 background-color: $main-blue;
+//             }
+
+//             h3, p, a {
+//                 margin: 5px 0;
+//             }
+
+//             h3 {
+//                 font-family: "AbhayaLibre-ExtraBold";
+//                 font-size: 22pt;
+//                 color: $main-blue;
+//             }
+
+//             p {
+//                 font-family: "Poppins-Light";
+//                 font-size: 17pt;
+//                 color: $main-blue;
+//             }
+
+//             a, a:visited {
+//                 font-family: "Poppins-Light";
+//                 font-size: 17pt;
+//                 color: $main-purple;
+//             }
+
+//         }
+        
+//     }
+
+// }
