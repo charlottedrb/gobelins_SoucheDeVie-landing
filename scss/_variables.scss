@@ -1,8 +1,21 @@
-$main-blue: #2526CC;
+$main-blue: #2526cc;
 $background-blue: #181556;
 
-$main-purple: #DD68F6;
+$main-purple: #dd68f6;
 
-$main-orange: #FF9A42;
+$main-orange: #ff9a42;
 
-$main-white: #fff
+$main-white: #fff;
+
+/// Font size
+
+$base-size: 18px;
+
+$h2-title: 40px;
+$h3-title: 25px;
+
+/// breakpoint
+
+$bp-desktop: 1200px;
+$bp-medium: 750px;
+$bp-mobile: 500px;

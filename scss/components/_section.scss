@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 section {
   .section {
     &-title {
@@ -7,6 +11,9 @@ section {
     &-content {
       // /!\ attention casse la version mobile
       max-width: 40%;
+      @media (max-width: $bp-desktop) {
+        max-width: unset;
+      }
     }
   }
 }
@@ -14,23 +21,78 @@ section {
 // About section
 
 .about {
-  margin-left: 15%;
-  padding: 10% 0;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  gap: 10vh;
-  background-image: url("/assets/arbre.png");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: auto;
-  h2 {
-    font-size: 45px;
-    font-family: "Abhaya Libre";
-    font-weight: 800;
+  gap: 45px;
+  overflow: hidden;
+  position: relative;
+  .element-about {
+    margin-left: 20%;
+    @media (max-width: $bp-desktop) {
+      width: 80%;
+      margin: auto;
+    }
   }
-  p {
-    font-size: 18px;
-    font-family: "Poppins";
-    font-weight: 300;
+  img {
+    position: absolute;
+    inset: auto -10% -10% auto;
+    height: 120vh;
+    min-width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    @media (max-width: $bp-desktop) {
+      position: relative;
+      height: 100vh;
+      inset: 0;
+      margin-bottom: -85px;
+    }
+  }
+}
+
+.projects {
+  width: 60%;
+  margin: auto;
+  @media (max-width: $bp-desktop) {
+    width: 80%;
+  }
+  @media (max-width: $bp-medium) {
+    width: 80%;
+    overflow-x: visible;
+  }
+  > p {
+    margin-bottom: 10%;
+  }
+  &-slider {
+    width: 100%;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: $bp-medium) {
+      width: 101vw;
+      margin-left: -13%;
+      overflow-x: scroll;
+    }
+  }
+
+  &-all {
+    display: flex;
+    width: 100%;
+    gap: 45px;
+    @media (max-width: $bp-medium) {
+      width: max-content;
+      padding: 0 10%;
+    }
+    .project-element {
+      width: 100%;
+      @media (max-width: $bp-medium) {
+        width: 60vw;
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
 }
