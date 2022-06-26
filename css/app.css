@@ -5,31 +5,21 @@ header > div {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   position: fixed;
   height: 100vh;
 }
-
 .menu ul {
   margin: 0;
   padding: 1.5rem;
 }
-
 .menu ul li {
   list-style: none;
   margin-bottom: 0.5rem;
   color: blue;
 }
-
 .menu > div {
   height: 100%;
   border-right: 1px solid blue;
@@ -38,34 +28,35 @@ header > div {
 footer {
   background-color: #181556;
 }
-
 footer .footer-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
-
 footer .footer-content > * {
   margin: 20px;
 }
-
 footer .footer-content > .footer-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 footer .footer-content > .footer-link a {
+  font-family: "TT Commons Light";
+  font-size: 24pt;
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;
+}
+footer .footer-content > .footer-logo-partner {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-content > .footer-logo-partner img {
+  margin: 15%;
+  width: 100%;
+}
+footer .footer-content > .footer-logo-partner > .footer-school-logo {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -94,47 +85,38 @@ p {
   font-family: "AbhayaLibre-Bold";
   src: url("/fonts/AbhayaLibre-Bold.ttf");
 }
-
 @font-face {
   font-family: "AbhayaLibre-ExtraBold";
   src: url("/fonts/AbhayaLibre-ExtraBold.ttf");
 }
-
 @font-face {
   font-family: "AbhayaLibre-Medium";
   src: url("/fonts/AbhayaLibre-Medium.ttf");
 }
-
 @font-face {
   font-family: "AbhayaLibre-Regular";
   src: url("/fonts/AbhayaLibre-Regular.ttf");
 }
-
 @font-face {
   font-family: "AbhayaLibre-SemiBold";
   src: url("/fonts/AbhayaLibre-SemiBold.ttf");
 }
-
 @font-face {
   font-family: "Livvic-Light";
   src: url("/fonts/Livvic-Light.ttf");
 }
-
 @font-face {
   font-family: "TT Commons Light Italic";
   src: url("/fonts/TT Commons Light Italic.otf");
 }
-
 @font-face {
   font-family: "TT Commons Light";
   src: url("/fonts/TT Commons Light.otf");
 }
-
 @font-face {
   font-family: "Poppins-Light";
   src: url("/fonts/Poppins-Light.ttf");
 }
-
 body {
   overflow-x: hidden;
 }
@@ -142,11 +124,9 @@ body {
 section .section-title {
   color: #2526cc;
 }
-
 section .section-content {
   max-width: 40%;
 }
-
 @media (max-width: 1200px) {
   section .section-content {
     max-width: unset;
@@ -160,27 +140,22 @@ section .section-content {
   width: 100vw;
   z-index: 30;
 }
-
 .transition-slide {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-
 .transition-slide:nth-child(1) {
   z-index: 3;
   background-color: #181556;
 }
-
 .transition-slide:nth-child(2) {
   z-index: 2;
   background-color: #dd68f6;
 }
-
 .transition-slide:nth-child(3) {
   background-color: #ff9a42;
 }
-
 .transition-content {
   position: absolute;
   inset: 0;
@@ -193,7 +168,6 @@ section .section-content {
   width: fit-content;
   z-index: 5;
 }
-
 .transition-content > span {
   display: inline-block;
   color: #fff;
@@ -205,29 +179,21 @@ section .section-content {
 
 .about {
   padding-top: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 45px;
   overflow: hidden;
   position: relative;
 }
-
 .about .element-about {
   margin-left: 20%;
 }
-
 @media (max-width: 1200px) {
   .about .element-about {
     width: 80%;
     margin: auto;
   }
 }
-
 .about img {
   position: absolute;
   inset: auto -10% -10% auto;
@@ -236,7 +202,6 @@ section .section-content {
      object-fit: cover;
   z-index: -1;
 }
-
 @media (max-width: 1200px) {
   .about img {
     position: relative;
@@ -251,24 +216,20 @@ section .section-content {
   width: 60%;
   margin: auto;
 }
-
 @media (max-width: 1200px) {
   .projects {
     width: 80%;
   }
 }
-
 @media (max-width: 750px) {
   .projects {
     width: 80%;
     overflow-x: visible;
   }
 }
-
 .projects > p {
   margin-bottom: 10%;
 }
-
 .projects-slider {
   width: 100%;
   -ms-overflow-style: none;
@@ -276,11 +237,9 @@ section .section-content {
   scrollbar-width: none;
   /* Firefox */
 }
-
 .projects-slider::-webkit-scrollbar {
   display: none;
 }
-
 @media (max-width: 750px) {
   .projects-slider {
     width: 101vw;
@@ -288,15 +247,11 @@ section .section-content {
     overflow-x: scroll;
   }
 }
-
 .projects-all {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   gap: 45px;
 }
-
 @media (max-width: 750px) {
   .projects-all {
     width: -webkit-max-content;
@@ -305,17 +260,14 @@ section .section-content {
     padding: 0 10%;
   }
 }
-
 .projects-all .project-element {
   width: 100%;
 }
-
 @media (max-width: 750px) {
   .projects-all .project-element {
     width: 60vw;
   }
 }
-
 .projects-all .project-element img {
   width: 100%;
 }
@@ -323,17 +275,14 @@ section .section-content {
 .team > .team-division > .team-member h3, .team > .team-division > .team-member p, .team > .team-division > .team-member a {
   margin: 0px;
 }
-
 .team > .team-division > .team-member h3 {
   font-family: "AbhayaLibre-ExtraBold";
   color: #2526cc;
 }
-
 .team > .team-division > .team-member p {
   font-family: "Poppins-Light";
   color: #2526cc;
 }
-
 .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
   font-family: "Poppins-Light";
   color: #dd68f6;
@@ -343,6 +292,7 @@ section .section-content {
   .menu {
     display: none;
   }
+
   .team-section > .section-title {
     font-size: 28pt;
   }
@@ -353,12 +303,11 @@ section .section-content {
   .team-section > .section-title, .team-section > .section-content {
     padding: 0 10% 0 10%;
   }
+
   .team {
     margin: 0 0 100px 0;
   }
   .team > .team-division > .team-member {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 25px 0 0 0;
   }
@@ -381,8 +330,24 @@ section .section-content {
   .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
     font-size: 17pt;
   }
-}
 
+  footer {
+    padding: 80px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-content > .footer-link {
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-content > .footer-logo-partner {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 @media only screen and (min-width: 1080px) {
   .team-section > .section-title {
     margin: 0;
@@ -397,20 +362,14 @@ section .section-content {
   .team-section > .team {
     margin: 0 10% 0 10%;
   }
+
   .team {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .team > .team-division {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 100px 0;
   }
   .team > .team-division > .team-member {
@@ -425,12 +384,25 @@ section .section-content {
   .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
     font-size: 20pt;
   }
-}
 
+  footer {
+    padding: 80px;
+  }
+  footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .footer-content > * {
+    margin: 20px;
+  }
+  footer .footer-content > .footer-logo-partner {
+    align-items: center;
+  }
+}
 body {
   margin: 0;
 }
-
 body section {
   min-height: 100vh;
 }

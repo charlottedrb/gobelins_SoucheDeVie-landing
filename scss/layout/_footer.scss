@@ -1,37 +1,3 @@
-// // phone version
-// footer {
-    
-//     background-color: $background-blue;
-    
-//     .footer-content {
-
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-
-//         & > * {
-//             margin: 20px;
-//         }
-
-//         & > .footer-link {
-
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-
-//             a {
-//                 color: $main-white;
-//                 text-decoration: none;
-//             }
-
-//         }
-//     }
-    
-// }
-
-// computer version
 footer {
     
     background-color: $background-blue;
@@ -39,9 +5,6 @@ footer {
     .footer-content {
 
         display: flex;
-        flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
 
         & > * {
             margin: 20px;
@@ -53,11 +16,30 @@ footer {
             flex-direction: column;
 
             a {
+                font-family: "TT Commons Light";
+                font-size: 24pt;
                 color: $main-white;
                 text-decoration: none;
+                white-space: nowrap;
             }
 
         }
+
+        & > .footer-logo-partner {
+
+            display: flex;
+            justify-content: center;
+
+            img {
+                margin: 15%;
+                width: 100%;
+            }
+
+            & > .footer-school-logo {
+                margin-right: 5%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
-    
 }
