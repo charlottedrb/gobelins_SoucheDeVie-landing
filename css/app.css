@@ -1,4 +1,12 @@
+header {
+  height: 100vh;
+}
+
 header > div {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,12 +20,8 @@ header > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  max-height: 100%;
   padding: 3rem;
-  background-image: url("/assets/header-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 @media (min-width: 750px) {
@@ -29,16 +33,42 @@ header > div {
 }
 
 header > div > div {
-  color: white;
+  color: #2526cc;
+  text-shadow: white 1px 0 50px;
   font-family: "Abhaya Libre";
-  font-size: 6rem;
+  font-size: 3rem;
+  text-align: right;
+}
+
+@media (min-width: 750px) {
+  header > div > div {
+    font-size: 6rem;
+  }
 }
 
 header > div > div > img {
   width: 2rem;
 }
 
+header > video {
+  z-index: 9;
+  display: none;
+}
+
+@media (min-width: 750px) {
+  header > video {
+    max-width: 100%;
+  }
+}
+
+header > img {
+  height: 100%;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
 .menu {
+  z-index: 11;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +128,7 @@ footer .footer-content > .footer-link {
 
 footer .footer-content > .footer-link a {
   font-family: "TT Commons Light";
-  font-size: 24pt;
+  font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
@@ -127,6 +157,18 @@ footer .footer-content > .footer-logo-partner > .footer-school-logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-family: 'Poppins-Light';
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  min-width: 80%;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -202,6 +244,11 @@ body {
 
 section {
   margin-bottom: 5rem;
+  position: relative;
+}
+
+section .section-title, section .section-content {
+  z-index: 10;
 }
 
 section .section-title {
@@ -215,6 +262,134 @@ section .section-content {
 @media (max-width: 1200px) {
   section .section-content {
     max-width: unset;
+  }
+}
+
+section .section-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 750px) {
+  section .section-bg {
+    display: none;
+    max-width: 100%;
+  }
+}
+
+section.dark-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: calc(-10% - 0.3rem);
+  background-color: #181556;
+  color: white;
+  padding: 2rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 750px) {
+  section.dark-bg {
+    margin-left: calc(-12% - 2rem);
+    padding: 3rem 0;
+  }
+}
+
+section.dark-bg .section-title {
+  color: white;
+}
+
+section.dark-bg .section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.dark-bg .section-content > div {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: "Poppins-Light";
+  color: white;
+}
+
+@media (min-width: 750px) {
+  section.dark-bg .section-content > div {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+}
+
+section.dark-bg .section-content > button {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  section.dark-bg .section-content > button {
+    display: none;
+  }
+}
+
+section.dark-bg .section-bg {
+  display: block;
+}
+
+section.dark-bg img:not(.section-bg) {
+  position: absolute;
+  top: -25%;
+  right: 0;
+  -webkit-animation: 5s linear infinite rotate;
+          animation: 5s linear infinite rotate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@media (min-width: 750px) {
+  section.dark-bg img:not(.section-bg) {
+    top: -50%;
+    right: 3rem;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -280,12 +455,26 @@ section .section-content {
   gap: 45px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 0;
+  margin-left: -10%;
+}
+
+.about .element-about {
+  padding-left: 10%;
+}
+
+@media (min-width: 750px) {
+  .about .element-about {
+    padding-left: 0;
+  }
+  .about .element-about:last-of-type {
+    margin-bottom: 5rem;
+  }
 }
 
 @media (max-width: 1200px) {
   .about .element-about {
     width: 80%;
-    margin: auto;
   }
 }
 
@@ -296,6 +485,12 @@ section .section-content {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+
+@media (min-width: 750px) {
+  .about img {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -404,13 +599,6 @@ section .section-content {
   .menu {
     display: none;
   }
-  .team-section > .section-title {
-    font-size: 28px;
-  }
-  .team-section > .section-content {
-    font-size: 20px;
-    max-width: 100%;
-  }
   .team {
     margin-top: 3rem;
   }
@@ -419,6 +607,7 @@ section .section-content {
     display: -ms-flexbox;
     display: flex;
     margin: 25px 0 0 0;
+    margin-left: -12%;
   }
   .team > .team-division > .team-member .team-member-hl {
     position: relative;
@@ -474,13 +663,6 @@ section .section-content {
 }
 
 @media only screen and (min-width: 1080px) {
-  .team-section > .section-title {
-    margin: 0;
-    font-size: 45px;
-  }
-  .team-section > .section-content {
-    font-size: 20px;
-  }
   .team {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -539,5 +721,11 @@ body {
 }
 
 body .container {
-  margin-left: 12%;
+  margin-left: 10%;
+}
+
+@media (min-width: 750px) {
+  body .container {
+    margin-left: 12%;
+  }
 }

@@ -3,9 +3,17 @@ body {
 }
 
 section {
+    $this: ".section";
+
     margin-bottom: 5rem;
+    position: relative;
 
     .section {
+        &-title,
+        &-content {
+            z-index: 10;
+        }
+
         &-title {
             color: $main-blue;
         }
@@ -15,6 +23,92 @@ section {
             max-width: 40%;
             @media (max-width: $bp-desktop) {
                 max-width: unset;
+            }
+        }
+
+        &-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+
+            @media (min-width: $bp-medium) {
+                display: none;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &.dark-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: calc(-10% - 0.3rem);
+        background-color: $background-blue;
+        color: white;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+
+        @media (min-width: $bp-medium) {
+            margin-left: calc(-12% - 2rem);
+            padding: 3rem 0;
+        }
+
+        #{$this}-title {
+            color: white;
+        }
+
+        #{$this}-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & > div {
+                margin-top: 1rem;
+                font-size: 1.2rem;
+                font-family: "Poppins-Light";
+                color: white;
+
+                @media (min-width: $bp-medium) {
+                    margin-top: 0;
+                    font-size: 1.5rem;
+                }
+            }
+
+            & > button {
+                display: block;
+
+                @media (min-width: $bp-medium) {
+                    display: none;
+                }
+            }
+        }
+
+        #{$this}-bg {
+            display: block;
+        }
+
+        & img:not(.section-bg) {
+            position: absolute;
+            top: -25%;
+            right: 0;
+            animation: 5s linear infinite rotate;
+            transform-origin: center;
+
+            @media (min-width: $bp-medium) {
+                top: -50%;
+                right: 3rem;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
             }
         }
     }
@@ -71,10 +165,21 @@ section {
     gap: 45px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 0;
+    margin-left: -10%;
+
     .element-about {
+        padding-left: 10%;
+
+        @media (min-width: $bp-medium) {
+            padding-left: 0;
+
+            &:last-of-type {
+                margin-bottom: 5rem;
+            }
+        }
         @media (max-width: $bp-desktop) {
             width: 80%;
-            margin: auto;
         }
     }
     img {
@@ -83,6 +188,11 @@ section {
         height: 120vh;
         object-fit: cover;
         z-index: -1;
+
+        @media (min-width: $bp-medium) {
+            margin-left: 0;
+        }
+
         @media (max-width: $bp-desktop) {
             position: relative;
             min-width: 100%;

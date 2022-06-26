@@ -36,6 +36,10 @@ body{
     margin: 0;
 
     .container{
-        margin-left: 12%;
+        margin-left: 10%;
+
+        @media (min-width: $bp-medium) {
+            margin-left: 12%;
+        }
     }
 }

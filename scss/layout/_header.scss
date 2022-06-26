@@ -1,15 +1,16 @@
 header {
+    height: 100vh;
     & > div {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        right: 0;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
-        height: 100vh;
+        max-height: 100%;
         padding: 3rem;
-        background-image: url("/assets/header-bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         @media (min-width: $bp-medium) {
             padding: 0;
@@ -18,13 +19,33 @@ header {
         }
 
         & > div {
-            color: white;
+            color: $main-blue;
+            text-shadow: white 1px 0 50px;
             font-family: "Abhaya Libre";
-            font-size: 6rem;
+            font-size: 3rem;
+            text-align: right;
+
+            @media (min-width: $bp-medium) {
+                font-size: 6rem;
+            }
 
             & > img {
                 width: 2rem;
             }
         }
+    }
+
+    & > video {
+        z-index: 9;
+        display: none;
+
+        @media (min-width: $bp-medium) {
+            max-width: 100%;
+        }
+    }
+
+    & > img {
+        height: 100%;
+        transform: translateX(-30%);
     }
 }
