@@ -29,5 +29,8 @@ window.addEventListener("load", () => {
       x: "100vw",
       ease: "power4.out",
       stagger: 0.1,
+    })
+    .set(".transition", {
+      zIndex: -1,
     });
 });
