@@ -46,22 +46,18 @@
 
 // _______________________________  phone version  _______________________________
 @media only screen and (max-width: $breaking-point) {
-
 	.menu {
 		display: none;
 	}
 
 	// tempo for dev
 	.team-section {
-		& > .section-title { font-size: 28pt; }
-		& > .section-content { font-size: 20pt; max-width: 100%;}
-		& > .section-title, & > .section-content { padding: 0 10% 0 10%; }
+		& > .section-title { font-size: 28px; }
+		& > .section-content { font-size: 20px; max-width: 100%;}
 	}
 
 	.team {
-
-		margin: 0 0 100px 0; 
-
+		margin-top: 3rem;
 		& > .team-division {
 
 			& > .team-member {
@@ -80,9 +76,9 @@
 					background-color: $main-blue;
 				}
 				
-				h3 { font-size: 22pt; }
-				p { font-size: 17pt; }
-				a, a:visited { font-size: 17pt; }
+				h3 { font-size: 22px; }
+				p { font-size: 17px; }
+				a, a:visited { font-size: 17px; }
 			}
 		}
 	}
@@ -115,11 +111,9 @@
 	.team-section {
 		& > .section-title {
 			margin: 0;
-			font-size: 45pt;
+			font-size: 45px;
 		}
-		& > .section-content { font-size: 20pt; }
-		& > .section-title, & > .section-content { padding: 0 40% 0 10%; }
-		& > .team { margin: 0 10% 0 10%; }
+		& > .section-content { font-size: 20px; }
 	}
 
 	.team {
@@ -131,13 +125,13 @@
 
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			margin: 100px 0;
+			margin-top: 3rem;
 
 			& > .team-member {
 				width: 100%;
-				h3 { font-size: 25pt; }
-				p { font-size: 20pt; }
-				a, a:visited { font-size: 20pt; }
+				h3 { font-size: 25px; }
+				p { font-size: 20px; }
+				a, a:visited { font-size: 20px; }
 			}
 
 		}
