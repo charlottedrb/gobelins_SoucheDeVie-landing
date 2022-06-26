@@ -13,12 +13,19 @@ header > div {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
-  padding-right: 4rem;
-  padding-bottom: 2rem;
+  padding: 3rem;
   background-image: url("/assets/header-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 750px) {
+  header > div {
+    padding: 0;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+  }
 }
 
 header > div > div {
@@ -313,7 +320,7 @@ section .section-content {
 
 @media (max-width: 750px) {
   .projects {
-    width: 80%;
+    width: 100%;
     overflow-x: visible;
   }
 }
@@ -336,8 +343,8 @@ section .section-content {
 
 @media (max-width: 750px) {
   .projects-slider {
-    width: 101vw;
-    margin-left: -13%;
+    width: 100vw;
+    margin-left: -12%;
     overflow-x: scroll;
   }
 }
