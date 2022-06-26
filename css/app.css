@@ -182,7 +182,6 @@ section .section-content {
   position: absolute;
   inset: auto -10% -10% auto;
   height: 120vh;
-  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
@@ -191,6 +190,7 @@ section .section-content {
 @media (max-width: 1200px) {
   .about img {
     position: relative;
+    min-width: 100%;
     height: 100vh;
     inset: 0;
     margin-bottom: -85px;
