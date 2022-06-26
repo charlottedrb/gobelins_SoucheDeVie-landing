@@ -153,6 +153,56 @@ section .section-content {
   }
 }
 
+.transition {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 30;
+}
+
+.transition-slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.transition-slide:nth-child(1) {
+  z-index: 3;
+  background-color: #181556;
+}
+
+.transition-slide:nth-child(2) {
+  z-index: 2;
+  background-color: #dd68f6;
+}
+
+.transition-slide:nth-child(3) {
+  background-color: #ff9a42;
+}
+
+.transition-content {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 5;
+}
+
+.transition-content > span {
+  display: inline-block;
+  color: #fff;
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
 .about {
   padding-top: 10vh;
   display: -webkit-box;
