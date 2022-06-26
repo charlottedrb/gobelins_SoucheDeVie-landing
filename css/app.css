@@ -182,7 +182,6 @@ section .section-content {
   position: absolute;
   inset: auto -10% -10% auto;
   height: 120vh;
-  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
@@ -191,6 +190,7 @@ section .section-content {
 @media (max-width: 1200px) {
   .about img {
     position: relative;
+    min-width: 100%;
     height: 100vh;
     inset: 0;
     margin-bottom: -85px;
@@ -270,65 +270,111 @@ section .section-content {
   width: 100%;
 }
 
-.team-section > .section-title {
-  margin: 0;
-  font-size: 45pt;
-}
-
-.team-section > .section-content {
-  font-size: 20pt;
-}
-
-.team-section > .section-title, .team-section > .section-content {
-  padding: 0 40% 0 10%;
-}
-
-.team-section > .team {
-  margin: 0 10% 0 10%;
-}
-
-.team {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.team > .team-division {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  margin: 100px 0;
-}
-
-.team > .team-division > .team-member {
-  width: 100%;
-}
-
 .team > .team-division > .team-member h3, .team > .team-division > .team-member p, .team > .team-division > .team-member a {
-  margin: 0;
+  margin: 0px;
 }
 
 .team > .team-division > .team-member h3 {
   font-family: "AbhayaLibre-ExtraBold";
-  font-size: 25pt;
   color: #2526cc;
 }
 
 .team > .team-division > .team-member p {
   font-family: "Poppins-Light";
-  font-size: 20pt;
   color: #2526cc;
 }
 
 .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
   font-family: "Poppins-Light";
-  font-size: 20pt;
   color: #dd68f6;
+}
+
+@media only screen and (max-width: 1080px) {
+  .menu {
+    display: none;
+  }
+  .team-section > .section-title {
+    font-size: 28pt;
+  }
+  .team-section > .section-content {
+    font-size: 20pt;
+    max-width: 100%;
+  }
+  .team-section > .section-title, .team-section > .section-content {
+    padding: 0 10% 0 10%;
+  }
+  .team {
+    margin: 0 0 100px 0;
+  }
+  .team > .team-division > .team-member {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 25px 0 0 0;
+  }
+  .team > .team-division > .team-member .team-member-hl {
+    position: relative;
+    display: block;
+    top: 10px;
+    height: 1px;
+    min-width: 20%;
+    width: 20%;
+    margin: 5px 10% 0 0;
+    background-color: #2526cc;
+  }
+  .team > .team-division > .team-member h3 {
+    font-size: 22pt;
+  }
+  .team > .team-division > .team-member p {
+    font-size: 17pt;
+  }
+  .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
+    font-size: 17pt;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .team-section > .section-title {
+    margin: 0;
+    font-size: 45pt;
+  }
+  .team-section > .section-content {
+    font-size: 20pt;
+  }
+  .team-section > .section-title, .team-section > .section-content {
+    padding: 0 40% 0 10%;
+  }
+  .team-section > .team {
+    margin: 0 10% 0 10%;
+  }
+  .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team > .team-division {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin: 100px 0;
+  }
+  .team > .team-division > .team-member {
+    width: 100%;
+  }
+  .team > .team-division > .team-member h3 {
+    font-size: 25pt;
+  }
+  .team > .team-division > .team-member p {
+    font-size: 20pt;
+  }
+  .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
+    font-size: 20pt;
+  }
 }
 
 body {
