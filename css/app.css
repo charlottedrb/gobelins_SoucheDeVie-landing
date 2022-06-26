@@ -1,5 +1,6 @@
 header {
   height: 100vh;
+  overflow: hidden;
 }
 
 header > div {
@@ -57,14 +58,22 @@ header > video {
 
 @media (min-width: 750px) {
   header > video {
+    display: block;
     max-width: 100%;
   }
 }
 
 header > img {
+  display: block;
   height: 100%;
   -webkit-transform: translateX(-30%);
           transform: translateX(-30%);
+}
+
+@media (min-width: 750px) {
+  header > img {
+    display: none;
+  }
 }
 
 .menu {
@@ -80,26 +89,75 @@ header > img {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
+  top: 0;
   font-family: "Abhaya Libre";
-  height: 100vh;
+  width: 100vw;
+}
+
+@media (min-width: 750px) {
+  .menu {
+    width: auto;
+    height: 100vh;
+  }
 }
 
 .menu ul {
   margin: 0;
   padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2526cc;
+}
+
+@media (min-width: 750px) {
+  .menu ul {
+    width: auto;
+    display: block;
+    background-color: transparent;
+  }
 }
 
 .menu ul li {
   list-style: none;
-  margin-bottom: 0.5rem;
-  color: blue;
+  color: #2526cc;
   font-size: 1.5rem;
   text-align: center;
 }
 
+@media (min-width: 750px) {
+  .menu ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 750px) {
+  .menu ul li a {
+    color: #2526cc;
+  }
+}
+
 .menu > div {
-  height: 100%;
-  border-right: 1px solid blue;
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .menu > div {
+    display: block;
+    height: 100%;
+    border-right: 1px solid #2526cc;
+  }
 }
 
 footer {
@@ -167,7 +225,8 @@ button {
   font-size: 1.5rem;
   padding: 1rem 2rem;
   border-radius: 10px;
-  min-width: 80%;
+  min-width: 50%;
+  max-width: 80%;
   margin-bottom: 1rem;
 }
 
@@ -350,13 +409,25 @@ section.dark-bg .section-content > button {
   }
 }
 
+section.dark-bg .section-content .qr-code {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  section.dark-bg .section-content .qr-code {
+    display: block;
+    width: 20vw;
+    margin-bottom: 2rem;
+  }
+}
+
 section.dark-bg .section-bg {
   display: block;
 }
 
-section.dark-bg img:not(.section-bg) {
+section.dark-bg img.rotate {
   position: absolute;
-  top: -25%;
+  top: -7rem;
   right: 0;
   -webkit-animation: 5s linear infinite rotate;
           animation: 5s linear infinite rotate;
@@ -365,8 +436,7 @@ section.dark-bg img:not(.section-bg) {
 }
 
 @media (min-width: 750px) {
-  section.dark-bg img:not(.section-bg) {
-    top: -50%;
+  section.dark-bg img.rotate {
     right: 3rem;
   }
 }
@@ -459,6 +529,12 @@ section.dark-bg img:not(.section-bg) {
   margin-left: -10%;
 }
 
+@media (min-width: 750px) {
+  .about {
+    margin-left: 0;
+  }
+}
+
 .about .element-about {
   padding-left: 10%;
 }
@@ -522,6 +598,12 @@ section.dark-bg img:not(.section-bg) {
 
 .projects > p {
   margin-bottom: 5rem;
+}
+
+@media (min-width: 750px) {
+  .projects > p {
+    width: 40%;
+  }
 }
 
 .projects-slider {
@@ -596,9 +678,6 @@ section.dark-bg img:not(.section-bg) {
 }
 
 @media only screen and (max-width: 1080px) {
-  .menu {
-    display: none;
-  }
   .team {
     margin-top: 3rem;
   }
@@ -716,16 +795,20 @@ section.dark-bg img:not(.section-bg) {
   }
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
   margin: 0;
 }
 
-body .container {
+html body .container {
   margin-left: 10%;
 }
 
 @media (min-width: 750px) {
-  body .container {
+  html body .container {
     margin-left: 12%;
   }
 }

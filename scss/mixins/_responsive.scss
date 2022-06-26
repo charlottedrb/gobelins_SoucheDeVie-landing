@@ -45,10 +45,6 @@
 
 // _______________________________  phone version  _______________________________
 @media only screen and (max-width: $breaking-point) {
-	.menu {
-		display: none;
-	}
-
 	.team {
 		margin-top: 3rem;
 		& > .team-division {

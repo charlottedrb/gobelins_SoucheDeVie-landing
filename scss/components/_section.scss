@@ -84,21 +84,30 @@ section {
                     display: none;
                 }
             }
+
+            .qr-code {
+                display: none;
+
+                @media (min-width: $bp-medium) {
+                    display: block;
+                    width: 20vw;
+                    margin-bottom: 2rem;
+                }
+            }
         }
 
         #{$this}-bg {
             display: block;
         }
 
-        & img:not(.section-bg) {
+        & img.rotate {
             position: absolute;
-            top: -25%;
+            top: -7rem;
             right: 0;
             animation: 5s linear infinite rotate;
             transform-origin: center;
 
             @media (min-width: $bp-medium) {
-                top: -50%;
                 right: 3rem;
             }
 
@@ -168,6 +177,10 @@ section {
     margin-bottom: 0;
     margin-left: -10%;
 
+    @media (min-width: $bp-medium) {
+        margin-left: 0;
+    }
+
     .element-about {
         padding-left: 10%;
 
@@ -215,6 +228,10 @@ section {
     }
     > p {
         margin-bottom: 5rem;
+        
+        @media (min-width: $bp-medium) {
+            width: 40%;
+        }
     }
     &-slider {
         width: 100%;
