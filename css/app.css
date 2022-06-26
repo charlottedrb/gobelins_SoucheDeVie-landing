@@ -178,30 +178,121 @@ section .section-content {
   }
 }
 
+.about img {
+  position: absolute;
+  inset: auto -10% -10% auto;
+  height: 120vh;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+@media (max-width: 1200px) {
+  .about img {
+    position: relative;
+    height: 100vh;
+    inset: 0;
+    margin-bottom: -85px;
+  }
+}
+
+.projects {
+  width: 60%;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .projects {
+    width: 80%;
+  }
+}
+
+@media (max-width: 750px) {
+  .projects {
+    width: 80%;
+    overflow-x: visible;
+  }
+}
+
+.projects > p {
+  margin-bottom: 10%;
+}
+
+.projects-slider {
+  width: 100%;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .projects-slider {
+    width: 101vw;
+    margin-left: -13%;
+    overflow-x: scroll;
+  }
+}
+
+.projects-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 45px;
+}
+
+@media (max-width: 750px) {
+  .projects-all {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0 10%;
+  }
+}
+
+.projects-all .project-element {
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .projects-all .project-element {
+    width: 60vw;
+  }
+}
+
+.projects-all .project-element img {
+  width: 100%;
+}
+
 .team > .team-division > .team-member h3, .team > .team-division > .team-member p, .team > .team-division > .team-member a {
   margin: 0px;
 }
 
 .team > .team-division > .team-member h3 {
   font-family: "AbhayaLibre-ExtraBold";
-  color: #2526CC;
+  color: #2526cc;
 }
 
 .team > .team-division > .team-member p {
   font-family: "Poppins-Light";
-  color: #2526CC;
+  color: #2526cc;
 }
 
 .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
   font-family: "Poppins-Light";
-  color: #DD68F6;
+  color: #dd68f6;
 }
 
 @media only screen and (max-width: 1080px) {
   .menu {
     display: none;
   }
-
   .team-section > .section-title {
     font-size: 28pt;
   }
@@ -212,11 +303,12 @@ section .section-content {
   .team-section > .section-title, .team-section > .section-content {
     padding: 0 10% 0 10%;
   }
-
   .team {
     margin: 0 0 100px 0;
   }
   .team > .team-division > .team-member {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 25px 0 0 0;
   }
@@ -228,7 +320,7 @@ section .section-content {
     min-width: 20%;
     width: 20%;
     margin: 5px 10% 0 0;
-    background-color: #2526CC;
+    background-color: #2526cc;
   }
   .team > .team-division > .team-member h3 {
     font-size: 22pt;
@@ -240,6 +332,7 @@ section .section-content {
     font-size: 17pt;
   }
 }
+
 @media only screen and (min-width: 1080px) {
   .team-section > .section-title {
     margin: 0;
@@ -254,14 +347,20 @@ section .section-content {
   .team-section > .team {
     margin: 0 10% 0 10%;
   }
-
   .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .team > .team-division {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     margin: 100px 0;
   }
   .team > .team-division > .team-member {
@@ -277,6 +376,7 @@ section .section-content {
     font-size: 20pt;
   }
 }
+
 body {
   margin: 0;
 }
